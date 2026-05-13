@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Kansas State Baseball Analytics Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 270 50% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 50% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 50% 16%;
+
+    --primary: 270 55% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 20% 95%;
+    --secondary-foreground: 270 55% 35%;
+
+    --muted: 270 15% 92%;
+    --muted-foreground: 270 20% 45%;
+
+    --accent: 270 55% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 20% 88%;
+    --input: 270 15% 95%;
+    --ring: 270 55% 35%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 270 55% 35%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 270 60% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 50% 40%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 270 45% 45%;
+    --sidebar-ring: 270 55% 50%;
+
+    /* Custom Kansas State colors */
+    --kstate-purple: 270 55% 35%;
+    --kstate-purple-dark: 270 50% 16%;
+    --kstate-purple-light: 270 45% 50%;
+    --kstate-silver: 270 10% 50%;
+    --kstate-gold: 45 100% 50%;
+  }
+
+  .dark {
+    --background: 270 50% 10%;
+    --foreground: 0 0% 100%;
+
+    --card: 270 45% 14%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 270 45% 14%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 270 55% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 40% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 270 30% 25%;
+    --muted-foreground: 270 10% 65%;
+
+    --accent: 45 100% 50%;
+    --accent-foreground: 270 50% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 30% 25%;
+    --input: 270 30% 20%;
+    --ring: 270 55% 50%;
+
+    --sidebar-background: 270 50% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 270 55% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 40% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 270 30% 20%;
+    --sidebar-ring: 270 55% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-kstate {
+    background: linear-gradient(135deg, hsl(270 55% 35%) 0%, hsl(270 50% 20%) 100%);
+  }
+  
+  .gradient-kstate-accent {
+    background: linear-gradient(135deg, hsl(270 55% 40%) 0%, hsl(270 45% 30%) 100%);
+  }
+
+  .text-gradient-kstate {
+    background: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(270 10% 85%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-kstate {
+    box-shadow: 0 0 40px -10px hsl(270 55% 45% / 0.5);
+  }
+
+  .input-glow:focus {
+    box-shadow: 0 0 0 3px hsl(270 55% 45% / 0.3);
+  }
+}

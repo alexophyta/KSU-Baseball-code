@@ -1,0 +1,8 @@
+project_id = "edmbzzesovmpztzqwygm"
+
+[functions.assign-role]
+verify_jwt = false
+
+
+
+
